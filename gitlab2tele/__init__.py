@@ -36,6 +36,6 @@ class TeleSender():
         request_user = json_obj['user']['name']
         mr_title = json_obj['object_attributes']['title']
         url = json_obj['object_attributes']['url']
-        action = json_obj['object_attributes']['action']
-        ret = u'%s %s a merge request : %s. %s' % (request_user, action, mr_title, url)
+        state = json_obj['object_attributes']['state']
+        ret = u'%s %s a merge request : %s. %s' % (request_user, state, mr_title, url)
         return ret
